@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Http;
+using ContactManager.Models;
 
 namespace ContactManager.Controllers
 {
@@ -11,12 +12,20 @@ namespace ContactManager.Controllers
     {
         // GET: Contact
         
-        public string[] Get()
+        public Contact[] Get()
         {
-            return new string[]
+            return new Contact[]
             {
-                "Hello",
-                "World"
+                new Contact
+                {
+                    Id = 1,
+                    Name = "Glenn Block"
+                },
+                new Contact
+                {
+                    Id = 2,
+                    Name = "Dan Roth"
+                }
             };
         }
 
